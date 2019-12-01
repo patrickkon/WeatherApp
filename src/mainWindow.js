@@ -16,8 +16,8 @@ const mainContent = document.getElementById('content');
 const validPlace = document.getElementById('alert1');
 
 async function getTodayData(city){
-    try{
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKEY}`, {
+    try{                        
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKEY}`, {
         mode: 'cors', 
       });
     if (!response.ok) {
