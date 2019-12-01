@@ -18,7 +18,7 @@ app.use("/main", router);
 
 
 // V2 for set static folder:
-app.use(express.static(path.join(__dirname, "src")));
+app.use("/src/", express.static(path.join(__dirname, "src")));
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
