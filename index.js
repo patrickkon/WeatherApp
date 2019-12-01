@@ -2,7 +2,7 @@ const express = require('express')
 const router = require("./routes/api/members");
 const path = require('path');
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000 
 
 // Body Parser Middleware
 app.use(express.json());
