@@ -1,0 +1,32 @@
+.display-2{
+    font-family:"garamond"
+}
+
+.container-sm{
+/*     text-align: center;
+ */    display: inline-block;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 30%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    
+}
+
+#weatherContent{
+    
+}
+
+
+#searchinputCity{
+    width: 300px;
+}
+
+#alert1{
+    display: none;
+    width: 300px;
+    top: -170px;
+    right: -400px;
+}

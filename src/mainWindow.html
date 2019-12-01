@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./mainWindow.css" type="text/css">
+</head>
+<body>
+<div class="container-sm">
+
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+        <h1 class="display-2">Weather</h1>
+    </a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            1 of 3
+            </div>
+            <div class="col-6">
+           
+                            
+                <form id="form" class="form-horizontal">
+                        <fieldset>
+                        
+                        <!-- Form Name -->
+                        <legend>Search for a City</legend>
+                        
+                        <!-- Search input-->
+                        <div class="form-group">
+                        <label class="col-md-4 control-label" for="searchinput_city">City</label>
+                        <div class="col-md-4">
+                            <input list="cities" id="searchinputCity" name="searchinputCity" type="search" placeholder="London" class="form-control input-md" />
+                            <datalist id="cities">
+                                <option value="Chocolate"> </option>
+                                <option value="Coconut"> </option>
+                                <option value="Mint"></option>
+                                <option value="Strawberry"></option>
+                                <option value="Vanilla"></option>
+                            </datalist>
+                            <p class="help-block">help</p>
+                        </div>
+                        </div>
+                        
+                        <!-- Button -->
+                        <div class="form-group">
+                        <label class="col-md-4 control-label" for="doneButton"></label>
+                        <div class="col-md-4">
+                            <button id="doneButton" name="doneButton" class="btn btn-primary">Go</button>
+                        </div>
+                        </div>
+                        
+                        
+
+                        </fieldset>
+                    <div id="alert1" class="alert alert-danger" role="alert">
+                            Please enter a valid location!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>   
+                            </button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+            <div class="col">
+            
+
+                    <div id="weatherContent" class="media">
+                            <img id="description" class="align-self-start mr-3" >
+                            <div class="media-body">
+                              <h5 id="city" class="mt-0"></h5>
+                              <p id="temp"></p>
+                              <p id="weather-description"></p>
+                              <div class="min-max">
+                                    <p id="temp-min"></p>
+                                    <p id="temp-max"></p>
+                                </div>
+                                <p id="wind"></p>
+                                <div class="sun">
+                                    <p id="sunrise"></p>
+                                    <p id="sunset"></p>
+                                </div>
+                            </div>
+                          </div>
+
+
+
+            </div>
+        </div>
+        
+    </div>
+
+
+<!-- 
+    <div id="content">
+    <section class="today">
+        <p id="city" class="today-part"></p>
+        <p id="temp"></p>
+        <p id="weather-description"></p>
+        <div class="min-max">
+            <p id="temp-min"></p>
+            <p id="temp-max"></p>
+        </div>
+        <p id="wind"></p>
+        <div class="sun">
+            <p id="sunrise"></p>
+            <p id="sunset"></p>
+        </div>
+        <img id="description" />
+    
+    </section>
+    </div> -->
+            
+</div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./mainWindow.js"></script>
+</body>
+</html>
