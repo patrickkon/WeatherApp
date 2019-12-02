@@ -1,27 +1,88 @@
 .display-2{
-    font-family:"garamond"
+    font-family:"garamond";
+    color: #f35626;
+    background-image: linear-gradient(92deg, #f35626 0%,#feab3a 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 15s infinite linear;
+}
+
+label{
+    font-size: x-large;
+}
+
+/* #title{
+    padding: 3%;
+     display: table;
+    margin-left: auto;
+    margin-right: auto;
+    
+    transform: translate(110%,-0%);
+} */
+
+legend{
+    font-family: "garamond";
+    color:#757D75;
+    font-weight: 400;
 }
 
 .container-sm{
 /*     text-align: center;
- */    display: inline-block;
+       display: inline-block;
+ */  
+  /* 
     position: absolute;
     width: 300px;
     height: 200px;
     z-index: 15;
     top: 30%;
     left: 50%;
-    margin: -100px 0 0 -150px;
+    margin: -100px 0 0 -150px; */
     
 }
 
-#weatherContent{
-    
+#container1{
+/*     justify-content: space-evenly;
+    align-items: center;
+ */}
+
+/* .row{
+    width:100%;
+} */
+
+#col2{
+    margin: 10%;
+    animation: bounceInUp 1s;
+    text-align: center;
 }
 
+/* #titleWrap, #form, legend, .form-group{
+    margin: auto
+} */
+
+
+
+.col-md-4{
+    font-family:"garamond";
+}
+
+#title{
+   /*  top: 20; */
+}
+
+
+#searchBox{
+    left: 18%;  
+}
 
 #searchinputCity{
     width: 300px;
+}
+
+#doneButtonWrap{
+    left: 33%;  
+    font-family: "garamond";
 }
 
 #alert1{
@@ -30,3 +91,49 @@
     top: -170px;
     right: -400px;
 }
+
+/*-----------------------------------*\
+  $Column 3 (rightmost) styles:
+\*-----------------------------------*/
+#col3{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    left: -10%;
+    display: inline-block;
+}
+
+#weatherContent{
+    text-align: center;
+}
+
+table{
+    width:200%;
+}
+
+p{
+    margin: -7%;
+}
+
+.table-col-1{
+    
+}
+
+.table-col-2{
+
+}
+
+
+
+/*-----------------------------------*\
+  $ANIMATIONS
+\*-----------------------------------*/
+
+@keyframes hue {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    
+    to {
+      filter: hue-rotate(-360deg);
+    }
+  }

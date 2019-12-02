@@ -6,33 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="./src/mainWindow.css" type="text/css">
 </head>
 <body>
 <div class="container-sm">
 
-    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-        <h1 class="display-2">Weather</h1>
-    </a>
-
-    <div class="container">
+    
+<!--     d-flex justify-content-center
+ -->    <div id="container1" class="container">
         <div class="row">
             <div class="col">
             1 of 3
             </div>
-            <div class="col-6">
-           
+            <div id="col2" class="col-6">
+                
+                <a id="titleWrap" class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+                    <h1 id="title" class="display-2">Weather</h1>
+                </a>
                             
                 <form id="form" class="form-horizontal">
                         <fieldset>
                         
                         <!-- Form Name -->
-                        <legend>Search for a City</legend>
+                        <legend>Your friendly weather pal</legend>
                         
                         <!-- Search input-->
                         <div class="form-group">
                         <label class="col-md-4 control-label" for="searchinput_city">City</label>
-                        <div class="col-md-4">
+                        <div id="searchBox" class="col-md-4">
                             <input list="cities" id="searchinputCity" name="searchinputCity" type="search" placeholder="London" class="form-control input-md" />
                             <datalist id="cities">
                                 <option value="Chocolate"> </option>
@@ -41,14 +43,13 @@
                                 <option value="Strawberry"></option>
                                 <option value="Vanilla"></option>
                             </datalist>
-                            <p class="help-block">help</p>
                         </div>
                         </div>
                         
                         <!-- Button -->
                         <div class="form-group">
                         <label class="col-md-4 control-label" for="doneButton"></label>
-                        <div class="col-md-4">
+                        <div id="doneButtonWrap" class="col-md-4">
                             <button id="doneButton" name="doneButton" class="btn btn-primary">Go</button>
                         </div>
                         </div>
@@ -68,8 +69,63 @@
 
 
             </div>
-            <div class="col">
+            <div id="col3" class="col">
+                    
+                    <!-- Table markup-->
+
+<table id="tableWeather">
+
+    <!-- table header -->
+
+        <thead>
+            <tr>
+                
+                <th scope="col" id="1" class="table-col-1">
+                        <hr />
+                        <p> Attribute </p>
+                        <hr />
+                </th>
+                <th scope="col" id="1" class="table-col-2">
+                        <hr />
+                        <p>Value</p>
+                        <hr />
+                </th>
+                
+               
+            </tr>
             
+        </thead>
+
+    <!-- table footer -->
+
+        <tfoot>
+            <tr>  
+                    <th class="table-col-1">
+                    </th>
+                    <th class="table-col-2">
+                    </th>
+            </tr>
+        </tfoot>
+
+    <!-- table body -->
+        <tbody>
+            <tr>
+                <td class="table-col-1"> 
+                    <p>YOLO BODY </p>
+                    <hr />
+                    <p>YOLO BODY 2</p>
+                    <hr />
+                </td>
+                <td class="table-col-2"> 
+                        <p>YOLO BODY </p>
+                        <hr />
+                        <p>YOLO BODY 2</p>
+                        <hr />
+                    </td>    
+            </tr>
+        </tbody>
+</table>
+
 
                     <div id="weatherContent" class="media">
                             <img id="description" class="align-self-start mr-3" >
@@ -87,9 +143,7 @@
                                     <p id="sunset"></p>
                                 </div>
                             </div>
-                          </div>
-
-
+                        </div>
 
             </div>
         </div>
@@ -122,6 +176,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="./src/mainWindow.js"></script>
+    <script src="./src/mainWindow.js" type="module"></script>
+    <script src="./src/animations/mainWindowAnimations.js" type="module"></script>
 </body>
 </html>

@@ -14,9 +14,15 @@ const sunrise = document.getElementById('sunrise');
 const sunset = document.getElementById('sunset');
 const mainContent = document.getElementById('content');
 const validPlace = document.getElementById('alert1');
+import {animateCSS, animateTitle} from "./animations/mainWindowAnimations.js"; // might obsolete
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 async function getTodayData(city){
-    try{                        
+    try{    
+    document.getElementById("titleWrap").className = "navbar-brand mr-0 mr-md-2 animated flash infinite delay-0.5s"                   
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKEY}`, {
         mode: 'cors', 
       });
@@ -26,11 +32,15 @@ async function getTodayData(city){
     const fetchedData = await response.json();
     validPlace.style.display = 'none';
     displayToday(fetchedData);
+    await sleep(900); //create at least some delay so my animation can have enough time to run for 1 cycle     
     }
     catch (error){
         console.log(error);
         // handle error. Tell user to reinput:
         validPlace.style.display = 'inline-block';
+    }
+    finally{
+      document.getElementById("titleWrap").className = "navbar-brand mr-0 mr-md-2"
     }
 }
 
@@ -52,6 +62,7 @@ async function displayToday(apiData){
 doneBtn.addEventListener('click', () => {
     event.preventDefault(); // Crucial to prevent redirection, which causes fetch to throw TypeError: failed to fetch
     getTodayData(cityValue.value);
+    //animateCSS('.display-2', 'flash')
 });
 
 /* 
