@@ -4,7 +4,7 @@ const uuid = require("uuid");
 const path = require('path')
 // Gets all members:
 router.get("/", (req, res) => {
-    res.sendFile('src/mainWindow.html' , { root : "./"});
+    res.sendFile('index.html' , { root : "./"});
 });
 
 // Gets single member:

@@ -17,11 +17,11 @@
  -->    <div id="container1" class="container">
         <div class="row">
             <div class="col">
-            1 of 3
+            
             </div>
             <div id="col2" class="col-6">
                 
-                <a id="titleWrap" class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+                <a id="titleWrap" class="navbar-brand mr-0 mr-md-2" href="/main" aria-label="Bootstrap">
                     <h1 id="title" class="display-2">Weather</h1>
                 </a>
                             
@@ -73,6 +73,10 @@
                     
                     <!-- Table markup-->
 
+
+
+<!-- <div id="weatherContent" class="media">   
+ -->        <img id="description" class="align-self-start mr-3" >
 <table id="tableWeather">
 
     <!-- table header -->
@@ -80,15 +84,15 @@
         <thead>
             <tr>
                 
-                <th scope="col" id="1" class="table-col-1">
-                        <hr />
-                        <p> Attribute </p>
-                        <hr />
+                <th scope="col" id="tableRow1Col1" class="table-col-1">
+                       
+                        <h5 id="cityAttribute" class="mt-0">City</h5>
+                        <hr class="tableLine1" />
                 </th>
-                <th scope="col" id="1" class="table-col-2">
-                        <hr />
-                        <p>Value</p>
-                        <hr />
+                <th scope="col" id="tableRow1Col2" class="table-col-2">
+                        
+                        <h5 id="city" class="mt-0"></h5>
+                        <hr class="tableLine1" />
                 </th>
                 
                
@@ -111,41 +115,51 @@
         <tbody>
             <tr>
                 <td class="table-col-1"> 
-                    <p>YOLO BODY </p>
-                    <hr />
-                    <p>YOLO BODY 2</p>
-                    <hr />
+
+                        <p id="tempAttribute">Temp</p>
+                        <hr />
+                        <p id="weather-descriptionAttribute">Desc</p>
+                        <hr />
+                        <div class="min-max">
+                            <p id="temp-minAttribute">Temp (Min)</p>
+                            <hr />
+                            <p id="temp-maxAttribute">Temp (Max)</p>
+                            <hr />
+                        </div>
+                        <p id="windAttribute">Wind Speed</p>
+                        <hr />
+                        <div class="sun">
+                                <p id="sunriseAttribute">Sunrise Time</p>
+                                <hr />
+                                <p id="sunsetAttribute">Sunset Time</p>
+                                <hr />
+                        </div>
                 </td>
-                <td class="table-col-2"> 
-                        <p>YOLO BODY </p>
+                <td id="tableValues" class="table-col-2"> 
+                        <p id="temp"></p>
                         <hr />
-                        <p>YOLO BODY 2</p>
+                        <p id="weather-description"></p>
                         <hr />
+                        <div class="min-max">
+                            <p id="temp-min"></p>
+                            <hr />
+                            <p id="temp-max"></p>
+                            <hr />
+                        </div>
+                        <p id="wind"></p>
+                        <hr />
+                        <div class="sun">
+                                <p id="sunrise"></p>
+                                <hr />
+                                <p id="sunset"></p>
+                                <hr />
+                        </div>
                     </td>    
             </tr>
         </tbody>
 </table>
-
-
-                    <div id="weatherContent" class="media">
-                            <img id="description" class="align-self-start mr-3" >
-                            <div class="media-body">
-                              <h5 id="city" class="mt-0"></h5>
-                              <p id="temp"></p>
-                              <p id="weather-description"></p>
-                              <div class="min-max">
-                                    <p id="temp-min"></p>
-                                    <p id="temp-max"></p>
-                                </div>
-                                <p id="wind"></p>
-                                <div class="sun">
-                                    <p id="sunrise"></p>
-                                    <p id="sunset"></p>
-                                </div>
-                            </div>
-                        </div>
-
-            </div>
+<!-- </div>              
+ -->                </div>
         </div>
         
     </div>

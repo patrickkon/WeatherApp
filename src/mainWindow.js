@@ -14,6 +14,7 @@ const sunrise = document.getElementById('sunrise');
 const sunset = document.getElementById('sunset');
 const mainContent = document.getElementById('content');
 const validPlace = document.getElementById('alert1');
+const tableWeather = document.getElementById("tableWeather");
 import {animateCSS, animateTitle} from "./animations/mainWindowAnimations.js"; // might obsolete
 
 function sleep(ms) {
@@ -31,6 +32,7 @@ async function getTodayData(city){
       }
     const fetchedData = await response.json();
     validPlace.style.display = 'none';
+    tableWeather.style.display = 'table';
     displayToday(fetchedData);
     await sleep(900); //create at least some delay so my animation can have enough time to run for 1 cycle     
     }

@@ -103,20 +103,27 @@ legend{
 }
 
 #weatherContent{
-    text-align: center;
+    
 }
 
 table{
     width:200%;
+    display: none;
+    font-family: "garamond";
 }
 
-p{
-    margin: -7%;
+hr{
+    color: #c0c8c9;
+    margin: -1%;
+}
+
+#tableRow1Col1, #tableRow1Col2{
+    color: #325ca8;
 }
 
 .table-col-1{
-    
-}
+/*     width: 30%
+ */}
 
 .table-col-2{
 
