@@ -39,7 +39,8 @@ legend{
     top: 30%;
     left: 50%;
     margin: -100px 0 0 -150px; */
-    
+    margin: auto auto;
+    width: fixed;
 }
 
 #container1{
@@ -77,7 +78,7 @@ legend{
 }
 
 #searchinputCity{
-    width: 300px;
+    width: 220%;
 }
 
 #doneButtonWrap{
@@ -144,3 +145,14 @@ hr{
       filter: hue-rotate(-360deg);
     }
   }
+
+
+/*-----------------------------------*\
+  Responsive: Portrait tablets and up
+\*-----------------------------------*/
+/* @media screen and (min-width: 48em) {
+
+    .container-sm, #col2, #container1{
+        transform: scale(2);
+    }
+  } */
