@@ -39,7 +39,7 @@ async function getTodayData(city){
     catch (error){
         console.log(error);
         // handle error. Tell user to reinput:
-        validPlace.style.display = 'inline-block';
+        validPlace.style.display = 'block';
     }
     finally{
       document.getElementById("titleWrap").className = "navbar-brand mr-0 mr-md-2"

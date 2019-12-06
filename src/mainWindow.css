@@ -1,3 +1,8 @@
+.col-6, .col{
+    border: 1rem solid;
+}
+
+
 .display-2{
     font-family:"garamond";
     color: #f35626;
