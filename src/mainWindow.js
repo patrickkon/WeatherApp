@@ -15,7 +15,6 @@ const sunset = document.getElementById('sunset');
 const mainContent = document.getElementById('content');
 const validPlace = document.getElementById('alert1');
 const tableWeather = document.getElementById("tableWeather");
-import {animateCSS, animateTitle} from "./animations/mainWindowAnimations.js"; // might obsolete
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -50,11 +49,11 @@ async function displayToday(apiData){
     city.textContent = apiData.name + ', ' + apiData.sys.country; 
     //rounded to integer
     temp.textContent = `${Math.round(apiData.main.temp)} °C`;
-    tempMin.textContent = `min: ${Math.round(apiData.main.temp_min)} °C`;
-    tempMax.textContent = `max: ${Math.round(apiData.main.temp_max)} °C`;
-    wind.textContent = `wind: ${apiData.wind.speed} m/s`;
-    sunrise.textContent = `Sunrise: ${new Date((apiData.sys.sunrise + apiData.timezone) * 1000).toLocaleTimeString().slice(-10, -6)} AM`;
-    sunset.textContent = `Sunset: ${new Date((apiData.sys.sunset + apiData.timezone) * 1000).toLocaleTimeString().slice(-10, -6)} PM`;
+    tempMin.textContent = `${Math.round(apiData.main.temp_min)} °C`;
+    tempMax.textContent = `${Math.round(apiData.main.temp_max)} °C`;
+    wind.textContent = `${apiData.wind.speed} m/s`;
+    sunrise.textContent = `${new Date((apiData.sys.sunrise + apiData.timezone) * 1000).toLocaleTimeString().slice(-10, -6)} AM`;
+    sunset.textContent = `${new Date((apiData.sys.sunset + apiData.timezone) * 1000).toLocaleTimeString().slice(-10, -6)} PM`;
     description.src = `http://openweathermap.org/img/wn/${apiData.weather[0].icon}@2x.png`;
     weather_description.textContent = apiData.weather[0].main; 
 
@@ -64,10 +63,4 @@ async function displayToday(apiData){
 doneBtn.addEventListener('click', () => {
     event.preventDefault(); // Crucial to prevent redirection, which causes fetch to throw TypeError: failed to fetch
     getTodayData(cityValue.value);
-    //animateCSS('.display-2', 'flash')
 });
-
-/* 
-var btn2 = document.querySelector('#rand').addEventListener('click', () => {
-  alert("Hello World");
-}); */

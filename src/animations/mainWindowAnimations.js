@@ -1,3 +1,5 @@
+// Unused module. Can be deleted
+
 export function animateCSS(element, animationName, callback) {
     const node = document.querySelector(element)
     node.classList.add('animated', animationName)

@@ -13,7 +13,6 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, "src/mainWindow.htm
 
 
 // Member API routes
-//app.use('/api/members', require('./routes/api/members'));
 app.use("/main", router);
 
 

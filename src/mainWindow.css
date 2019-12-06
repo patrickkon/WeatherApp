@@ -1,7 +1,62 @@
-.col-6, .col{
-    border: 1rem solid;
+.row{  /* this is the main flex container */
+    display: flex;
+    flex-grow: 1;
+    height: 100vh;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
+.col-sm-6, .col-sm{
+    border: 1rem solid;
+    display: flex;
+    flex-wrap: wrap; 
+}
+.col-sm-6{
+    flex-direction: row; /* default value is row: main axis left to right */
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-sm-6 > *{
+    border: 0.5rem solid blue;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#form{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+fieldset{ /* not sure if needed */
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-group{
+    
+    display:flex;
+    border: 0.2rem dashed grey;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-group > *{ 
+    border: 0.1rem solid cyan;
+    flex-basis: 100%;
+}
+
+.control-label{
+    text-align: center;
+}
+
+#doneButtonWrap{
+    display:flex;
+    justify-content: center;
+}
 
 .display-2{
     font-family:"garamond";
@@ -17,122 +72,49 @@ label{
     font-size: x-large;
 }
 
-/* #title{
-    padding: 3%;
-     display: table;
-    margin-left: auto;
-    margin-right: auto;
-    
-    transform: translate(110%,-0%);
-} */
-
 legend{
     font-family: "garamond";
     color:#757D75;
     font-weight: 400;
-}
-
-.container-sm{
-/*     text-align: center;
-       display: inline-block;
- */  
-  /* 
-    position: absolute;
-    width: 300px;
-    height: 200px;
-    z-index: 15;
-    top: 30%;
-    left: 50%;
-    margin: -100px 0 0 -150px; */
-    margin: auto auto;
-    width: fixed;
-}
-
-#container1{
-/*     justify-content: space-evenly;
-    align-items: center;
- */}
-
-/* .row{
-    width:100%;
-} */
-
-#col2{
-    margin: 10%;
-    animation: bounceInUp 1s;
     text-align: center;
 }
 
-/* #titleWrap, #form, legend, .form-group{
-    margin: auto
-} */
-
-
+#col2{
+    animation: bounceInUp 1s;
+}
 
 .col-md-4{
     font-family:"garamond";
 }
 
-#title{
-   /*  top: 20; */
-}
-
-
-#searchBox{
-    left: 18%;  
-}
-
-#searchinputCity{
-    width: 220%;
-}
-
 #doneButtonWrap{
-    left: 33%;  
     font-family: "garamond";
 }
 
-#alert1{
+.alert{
     display: none;
-    width: 300px;
-    top: -170px;
-    right: -400px;
 }
 
 /*-----------------------------------*\
   $Column 3 (rightmost) styles:
 \*-----------------------------------*/
-#col3{
-    margin-top: 10%;
-    margin-bottom: 10%;
-    left: -10%;
-    display: inline-block;
-}
-
-#weatherContent{
-    
+.col-sm{
+    align-items: center;
 }
 
 table{
-    width:200%;
+    /* width:200%; */
     display: none;
     font-family: "garamond";
 }
 
 hr{
     color: #c0c8c9;
-    margin: -1%;
+ 
 }
 
 #tableRow1Col1, #tableRow1Col2{
     color: #325ca8;
-}
-
-.table-col-1{
-/*     width: 30%
- */}
-
-.table-col-2{
-
 }
 
 
@@ -155,9 +137,13 @@ hr{
 /*-----------------------------------*\
   Responsive: Portrait tablets and up
 \*-----------------------------------*/
-/* @media screen and (min-width: 48em) {
-
-    .container-sm, #col2, #container1{
-        transform: scale(2);
+@media all and (max-width: 500px) {
+    #uselessCol{
+        display:none;
     }
-  } */
+
+    .row{
+        flex-direction: column;
+        max-width: 100vh;
+    }
+  }

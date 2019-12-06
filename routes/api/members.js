@@ -7,6 +7,10 @@ router.get("/", (req, res) => {
     res.sendFile('index.html' , { root : "./"});
 });
 
+/*--------------------------
+Obsolete HTTP requests from a previous project used for my own personal reference:
+--------------------------*/
+/* 
 // Gets single member:
 router.get("/:id", (req, res) => {
   const found = members.some(member => member.id == req.params.id);
@@ -74,5 +78,5 @@ router.delete("/:id", (req, res) => {
       .status(400)
       .json({ message: `No member with the id of ${req.params.id}` });
 });
-
+ */
 module.exports = router;
