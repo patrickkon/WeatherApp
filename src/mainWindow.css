@@ -7,7 +7,7 @@
 }
 
 .col-sm-6, .col-sm{
-    border: 1rem solid;
+    /* border: 1rem solid; */
     display: flex;
     flex-wrap: wrap; 
 }
@@ -19,7 +19,7 @@
 }
 
 .col-sm-6 > *{
-    border: 0.5rem solid blue;
+    /* border: 0.5rem solid blue; */
     display: flex;
     flex-wrap: wrap;
 }
@@ -37,15 +37,14 @@ fieldset{ /* not sure if needed */
 }
 
 .form-group{
-    
     display:flex;
-    border: 0.2rem dashed grey;
+    /* border: 0.2rem dashed grey; */
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .form-group > *{ 
-    border: 0.1rem solid cyan;
+    /* border: 0.1rem solid cyan; */
     flex-basis: 100%;
 }
 
