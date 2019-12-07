@@ -32,6 +32,7 @@ async function getTodayData(city){
     const fetchedData = await response.json();
     validPlace.style.display = 'none';
     tableWeather.style.display = 'table';
+    description.style.display = "block";
     displayToday(fetchedData);
     await sleep(900); //create at least some delay so my animation can have enough time to run for 1 cycle     
     }
@@ -40,6 +41,7 @@ async function getTodayData(city){
         // handle error. Tell user to reinput:
         validPlace.style.display = 'block';
         tableWeather.style.display = 'none';
+        description.style.display = "none";
     }
     finally{
       document.getElementById("titleWrap").className = "navbar-brand mr-0 mr-md-2"
