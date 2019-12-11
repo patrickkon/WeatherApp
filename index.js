@@ -3,6 +3,7 @@ const router = require("./routes/api/members");
 const path = require('path');
 const app = express()
 const port = process.env.PORT || 3000 
+require('dotenv').config()
 
 // Body Parser Middleware
 app.use(express.json());

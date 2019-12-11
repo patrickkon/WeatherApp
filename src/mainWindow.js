@@ -1,5 +1,4 @@
 // Static .js file that generates events
-const APIKEY = "f90eaaa700aab37e36330ca9e0e64b07";
 const doneBtn = document.querySelector('#doneButton');
 const cityValue = document.getElementById('searchinputCity');
 const form = document.getElementById('form');
@@ -16,11 +15,12 @@ const mainContent = document.getElementById('content');
 const validPlace = document.getElementById('alert1');
 const tableWeather = document.getElementById("tableWeather");
 
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function getTodayData(city){
+async function getTodayData(city, APIKEY){
     try{    
     document.getElementById("titleWrap").className = "navbar-brand mr-0 mr-md-2 animated flash infinite delay-0.5s"                   
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKEY}`, {
@@ -63,7 +63,10 @@ async function displayToday(apiData){
     mainContent.style.display = 'block';
 }
 
-doneBtn.addEventListener('click', () => {
+doneBtn.addEventListener('click', async () => {
     event.preventDefault(); // Crucial to prevent redirection, which causes fetch to throw TypeError: failed to fetch
-    getTodayData(cityValue.value);
+    const get_APIKEY_url = "main/weather/";
+    const response = await fetch(get_APIKEY_url);
+    const json = await response.json();
+    getTodayData(cityValue.value, json.APIKEY);
 });

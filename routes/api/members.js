@@ -7,6 +7,16 @@ router.get("/", (req, res) => {
     res.sendFile('index.html' , { root : "./"});
 });
 
+// Parse APIKEY
+router.get("/weather", (req, res) => {
+  const APIKEY = process.env.APIKEY;
+
+  const data = {
+    APIKEY: APIKEY
+  }
+  res.json(data);
+})
+
 /*--------------------------
 Obsolete HTTP requests from a previous project used for my own personal reference:
 --------------------------*/
